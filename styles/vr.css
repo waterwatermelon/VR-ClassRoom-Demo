@@ -9,8 +9,7 @@
     width: 265px;
     background: #3b485d;
 }
-/* logo */
-/* 背景使用平铺功能 background-repeat */
+/* logo */ 
 .vr-logo-box
 {
     background-image: url(../images/logo-bg_02.png);
@@ -21,11 +20,8 @@
 {
     /* TODO:logo图片需要重新切片 */
     display: block;
-    height:100%;
-    /* 50% 50%使得图片logo可以水平居中、垂直居中。 */
-    /* 原理？？？ */
+    height:100%; 
     background: url(../images/vr101-logo.png) no-repeat 50% 50%;
-
 }
 /* 课程列表 */
 .vr-courses-title
@@ -39,17 +35,14 @@
 }
 .vr-courses-list li
 {
-    height: 58px;
-    /* 光标划过时候，会变成小手指 */
+    height: 58px; 
     cursor: pointer;
     position: relative;
 }
 /* 设置鼠标移动到课程列表上的背景高亮效果 */
 .vr-courses-list li:hover::before 
-{
-    /* 设置内容为空 */
-    content: "";
-    /* 定位的目的是？ */
+{ 
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
@@ -72,7 +65,6 @@
 /* 设置鼠标移动到课程列表上的文中颜色、图标颜色改变 */
 .vr-courses-list li:hover .vr-courses-item
 {
-
     background: url(../images/l-sidebar_03.png) no-repeat 28px 3px;
     color: #fff;
 }
@@ -80,15 +72,12 @@
 {
     color: #dee1e3;
     background: #4f5f79;
-
 }
-
 .vr-courses-list .ui-on .vr-courses-item
 {
     color: #dee1e3;
     background-image: url(../images/l-sidebar_03.png);
-}
-/* 伪类before要怎么去理解它？ */
+} 
 .vr-courses-list .ui-on::before
 {
     content: "";
@@ -98,8 +87,7 @@
     width: 4px;
     height: 100%;
     background: url(../images/lsider-hover_02.png) repeat 0 0;
-    background-size: 100% 100%;
-    /* transition: width .5s; */
+    background-size: 100% 100%; 
 }
 /* 内容区 */
 .l-content
@@ -115,7 +103,6 @@
     background: #fff;
     border-bottom: 1px solid #e2e2e2;
     position: relative;
-    
 }
 .user-info
 {
@@ -185,9 +172,7 @@
     border-right:  6px solid transparent;
     border-left:  6px solid transparent;
 }
- 
-/* icon组件
- */
+/* icon组件 */
 .vr-icon
 {
     background: no-repeat;
@@ -215,7 +200,6 @@
     line-height: 49px;
     padding-left: 36px;
 }
- 
 .l-main__hd .vr-tab .vr-tab__item
 {
     display: inline-block;
@@ -304,13 +288,11 @@
     background-size: 100% 100%;
     color: #fff;
 }
-/* 作业展示小卡片
- */
+/* 作业展示小卡片 */
 .vr-card-main
 {
     clear:right;
     padding-top: 24px;
-    
 }
 .vr-card-list
 {
@@ -324,7 +306,6 @@
     border: 1px solid #e2e2e2;
     width: 356px;
     height: 270px;
-
 }
 .vr-card-item__db 
 {
@@ -352,7 +333,6 @@
     position: absolute;
     top: calc(50% - 11px);
     left: 18px;
-    
     background: url(../images/friend-icon.png) no-repeat;
     background-size: 22px 22px;
 }
@@ -360,11 +340,6 @@
 {
     width: 150px;
     height: 34px;
-    /* 单行文本溢出显示省略号
-    1.将溢出部分隐藏
-    2.设置文本内容溢出包含元素发生的事情
-    3. 元素内部的空白不处理，不换行。单行显示。
-    */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -376,7 +351,6 @@
 {   
     width: 118px;
     height: 100%;
-    
     line-height: 34px;
     position: absolute;
     right: 18px;
@@ -386,7 +360,6 @@
     width: 100%;
     height: 56px;
     background-color: #fff;
-
 }
 .vr-card-item__btns .vr-card-btn
 {
@@ -402,7 +375,6 @@
     width: 22px;
     height: 22px;
     background-size: 100%;
-
 }
 .vr-icon-edit
 {
@@ -449,7 +421,6 @@
     background: #16a4fa;
     color: #d2e9fe;
 }
-
 /* 新建作品框 */
 .add-box
 {
@@ -470,13 +441,11 @@
     margin: 186px auto;
     padding: 0px 24px;
     z-index: 10;
-
 }
 .add-container .add-works
 {
     width: 596px;
     height: 100%;
-    /* height: 480px; */
     background-color: #16a6fa;
     float: right;
     margin-left: 16px;
@@ -489,11 +458,9 @@
     background-color: #16a6fa;
     float: right;
     border-radius: 10px;
-    /* display: none; */
     opacity: 0;
     transition: 0.1s;
 }
-
 .add-works-hd
 {
     width: 100%;
@@ -519,7 +486,6 @@
 /* 新建作品表单 */
 .add-works-box
 {
-    
     background-color: #fff;
     border-bottom-left-radius:10px;  
     border-bottom-right-radius:10px;  
@@ -739,9 +705,6 @@
 {
     background-color: #c3e5fa;
 }
-
-
-
 .classmember-bd .right
 {
     width: 120px;
