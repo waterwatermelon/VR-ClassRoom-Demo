@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- html5 doctype-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VR-创客教室</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/vr.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <div class="l-sidebar">
+        <div class="vr-logo-box">
+            <a href="###" title="101 VR 创客教室" class="vr-logo">
+            </a>
+        </div>
+        <div class="vr-courses">
+            <div class="vr-courses-title">课程标题</div>
+            <ul class="vr-courses-list" >
+            </ul>
+        </div>
+    </div>
+    <div class="l-content">
+        <div class="l-top">
+            <div class="user-info">
+                <div class="user-info__item">
+                    <span class="vr-icon vr-icon--ppl"></span>
+                    <span class="user-info__txt">用户:王小明</span>
+                </div>
+                <div class="user-info__item">
+                    <span class="vr-icon vr-icon--info"></span>
+                    <span class="user-info__txt">身份：学生</span>
+                </div>
+            </div>
+            <div class="vr-extend">
+                <p class="vr-extend__txt">设备选择</p>
+                <i class="vr-extend__icon"></i>
+            </div>
+        </div>
+        <div class="l-main">
+            <div class="l-main__hd">
+                <ul class="vr-tab">
+                    <li class="vr-tab__item tab-on">我的作品</li>
+                    <li class="vr-tab__item">班级作品</li>
+                </ul>
+                <div class="vr-btns-group">
+                    <button class="vr-btn">
+                        <span class="vr-icon vr-btn-icon__submit"></span>
+                        <span class="vr-btns_txt">提交作品</span>
+                    </button>
+                    <button class="vr-btn" onclick="openAdd()">
+                        <span class="vr-icon vr-btn-icon__add"></span>
+                        <span class="vr-btns_txt">添加作品</span>
+                    </button>
+                </div>
+            </div>
+            <div class="l-main__bd">
+                <div class="vr-search">
+                    <div class="vr-search__main">
+                        <input type="text" value="搜索资源" />
+                        <i class="vr-icon"></i>
+                    </div>
+                    <button class="vr-search__btn">
+                        搜索
+                    </button>
+                </div>
+                <div class="vr-card-main">
+                    <ul class="vr-card-list">
+                    </ul>
+                </div>
+            </div>
+            <div class="l-main__ft">
+                <div class="vr-page">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add-box" id="add-box">
+        <div class="add-container">
+            <div class="add-works">
+                <div class="add-works-hd">
+                    <h3 class="add-works-hd_txt">
+                        新建作品
+                    </h3>
+                    <button class="add-works-hd_close" onclick="closeAdd()"></button>
+                </div>
+                <div class="add-works-box">
+                    <form action="" class="add-works-form">
+                        <div class="source-row form-row">
+                            <label class="txt">资源名称</label>
+                            <input type="text">
+                        </div>
+                        <div class="author-box form-row">
+                            <label for="" class="txt"> 作者</label>
+                            <ul class="authors-list">
+                            </ul>
+                            <a class="author-add__btn" onclick="openAuthorslist()"></a>
+                        </div>
+                        <div class="form-row pic-row">
+                            <label for="" class="txt">配图</label>
+                            <input type="text" id="uploadInput" value="点击上传图片" onclick="if(this.value=='点击上传图片')this.value='';"
+                                onblur="if(this.value == '')this.value='点击上传图片'">
+                            <input type="file" id="uploadFile" style="opacity:0;position:absolute;margin-left: -190px">
+                        </div>
+
+                        <div class="form-row brief-row">
+                            <label for="" class="txt">简介</label>
+                            <textarea name="" id="" cols="50" rows="8" class="textarea">
+                            </textarea>
+                        </div>
+                    </form>
+                    <div class="submit-area">
+                        <input type="submit" value="确认提交" class="submit__btn" onclick="closeAdd()">
+                        <p class="imply">提交后将显示在班级作品区</p>
+                    </div>
+                </div>
+            </div>
+            <div class="classmember" id="classmember">
+                <div class="classmember-hd">
+                    <h3 class="classmember-hd_txt">
+                        班级成员
+                    </h3>
+                    <button class="classmember-hd_close" onclick="closeAuthorslist()"></button>
+                </div>
+                <div class="classmember-bd">
+                    <div class="left">
+                        <div class="search-box">
+                            <input type="text" value="搜索人名..." onclick="if(this.value=='搜索人名...')this.value='';" onblur="if(this.value == '')this.value='搜索人名...'">
+                            <a href=""></a>
+                        </div>
+                        <select class="names-list selectable" multiple>
+                        </select>
+                    </div>
+                    <div class="right">
+                        <select class="names-list selected" multiple>
+                        </select>
+                    </div>
+                    <button class="add" onclick="editAuthorList(1)">添加</button>
+                    <button class="delete" onclick="editAuthorList(0)">删除</button>
+                </div>
+                <div class="classmember-ft">
+                    <button class="classmember__submit" onclick="closeAuthorslist()">确认</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
